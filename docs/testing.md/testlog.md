@@ -47,3 +47,22 @@ Expected result
 Actual result
 PASS or FAIL
 Relevant observations and evidence
+
+## Additional Reliability Test — Power Interruption and Event History
+
+### T08 — Power interruption during idle operation
+
+* **Procedure:** Disconnected and reconnected Arduino power while DoseGuard was idle.
+* **Result:** PASS — normal operation was restored.
+
+### T09 — Power interruption during an active alarm
+
+* **Procedure:** Disconnected and reconnected Arduino power while the alarm was sounding.
+* **Result:** PASS — the device recovered and operated smoothly.
+
+### T10 — Event history retention after restart
+
+* **Procedure:** Checked the event history, created a new event, restarted the Arduino, and checked the history again.
+* **Result:** PASS — the event history was preserved correctly after restart.
+
+**Evidence note:** These results are based on the developer's reported tests. Detailed timestamps, repeated trial counts, and photographs or video evidence have not yet been recorded.
